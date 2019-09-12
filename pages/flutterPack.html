@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flutter Pack problem</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        body{
+            text-align: center;
+            line-height: 30px;
+            padding: 50px;
+            overflow: hidden;
+        }
+        p{
+            font-size: 20px;
+            line-height: 50px;
+            text-align: initial;
+        }
+        xmp{
+            background: rgba(27, 20, 20, 0.9);
+            text-align: initial;
+            color: #fff;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>
+        flutte 打包后无法访问网络
+    </h2>
+    <p>在 android\app\src\main目录下添加一下代码，放置于application标签之后</p>
+    <xmp>
+        <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    </xmp>
+</body>
+
+</html>
